@@ -24,6 +24,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 8px;
+    border: 5px solid #1c356b00;
 }
 
 header .logo h1 {
@@ -109,7 +111,8 @@ footer {
     padding: 10px;
     width: 100%;
     margin-top: auto;
-    /* Garante que o footer vai para o final */
+    border-radius: 8px;
+    border: 5px solid #1c356b00;
 }
 
 .about-info:last-child,
