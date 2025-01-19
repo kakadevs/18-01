@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: white;
+}
+
+header {
+    background-color: #f0b74d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header .logo p {
+    font-size: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: rgb(48, 209, 142);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #2e8b57;
+}
+
+.intro {
+    text-align: center;
+}
+
+.about-info,
+.project-management,
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+button {
+    background-color: #1c356b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1c6c41;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #1c356b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+    /* Garante que o footer vai para o final */
+}
+
+.about-info:last-child,
+.project-management:last-child,
+.contact-info:last-child {
+    margin-bottom: 50px;
+    /* Espaço entre a última div e o rodapé */
+}

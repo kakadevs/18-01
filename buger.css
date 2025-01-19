@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+li {
+  color: rgb(255, 0, 0); /* Cor dos itens do menu */
+}
+
+li:visited {
+  color: rgb(0, 68, 255);
+}
+
+li:hover {
+  color: #fc10f0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.off-screen-menu {
+  background-color: #122142;
+  border-radius: 8px;
+  border: 5px solid #1c356b;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: .3s ease;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Alinha os links verticalmente */
+  justify-content: center;
+  align-items: center;
+}
+
+.off-screen-menu li {
+  margin: 10px 0;
+}
+
+.off-screen-menu a {
+  color: white; /* Mudado para branco para contraste com o fundo */
+  text-decoration: none; /* Corrigido para remover o sublinhado */
+  font-size: 1.2rem;
+}
+
+.off-screen-menu a:hover {
+  color: #ff8928; /* Cor de hover */
+}
+
+/* Navegação */
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0); /* Sem alteração */
+}
+
+/* Estilo do hambúrguer */
+.ham-menu {
+  height: 30px;
+  width: 40px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #ff4000; /* Cor destacada para o hambúrguer */
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+/* Mudanças quando o hambúrguer está ativo (se transformando em X) */
+.ham-menu.active span {
+  background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0; /* Esconde a linha do meio */
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

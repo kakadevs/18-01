@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - Adoro S/A</title>
+        <link rel="stylesheet" href="log.css">
+        <style>
+            
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            
+            .logo-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .logo {
+                max-width: 150px;
+                height: auto;
+            }
+
+            .logo-container h1 {
+                margin: 0;
+                font-size: 1.5rem;
+                color: #333;
+            }
+
+            
+            .login-container {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .login-container h1 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .login-container input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .login-container button {
+                width: 100%;
+                padding: 10px;
+                background: #ffc800;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .login-container button:hover {
+                background: #ff0d00;
+            }
+
+            .error {
+                color: red;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="logo-container">
+            <img src="kil.png" alt="Logo Adoro S/A" class="logo">
+            <h1>MEIO - AMBIENTE 🌳</h1>
+        </div>
+
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Senha"
+                    required>
+                <p class="error" id="errorMsg"></p>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <script>
+            
+            const users = [
+        
+                { email: "kaua.silva@adoro.com.br", password: "Teamomae16@" },
+                { email: "luis@adoro.com.br", password: "12345" },
+                { email: "daniele.barros@adoro.com.br", password: "12345" },
+                { email: "nyla.astolfo@adoro.com.br", password: "12345" },
+                { email: "ana.clara@adoro.com.br", password: "12345" },
+                { email: "bruno.souza@adoro.com.br", password: "bruno789" },
+                { email: "paula.oliveira@adoro.com.br", password: "paula1010" },
+                { email: "ricardo.monteiro@adoro.com.br", password: "ricardo111" },
+                { email: "carla.silva@adoro.com.br", password: "carla2020" },
+            ];
+
+            
+            document.getElementById("loginForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const errorMsg = document.getElementById("errorMsg");
+
+                
+                const user = users.find(u => u.email === email && u.password === password);
+
+                if (user) {
+                    errorMsg.textContent = "";
+                    window.location.href = "home.html"; 
+                } else {
+                    errorMsg.textContent = "Email ou senha inválidos!";
+                }
+            });
+        </script>
+    </body>
+</html>
