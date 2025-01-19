@@ -6,17 +6,6 @@
   text-decoration: none;
 }
 
-li {
-  color: rgb(255, 0, 0); /* Cor dos itens do menu */
-}
-
-li:visited {
-  color: rgb(0, 68, 255);
-}
-
-li:hover {
-  color: #fc10f0;
-}
 
 body {
   font-family: sans-serif;
@@ -25,7 +14,7 @@ body {
 .off-screen-menu {
   background-color: #122142;
   border-radius: 8px;
-  border: 5px solid #1c356b;
+  border: 5px solid #1c356b00;
   height: 100vh;
   width: 250px;
   position: fixed;
@@ -48,7 +37,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; /* Alinha os links verticalmente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -58,23 +47,23 @@ body {
 }
 
 .off-screen-menu a {
-  color: white; /* Mudado para branco para contraste com o fundo */
-  text-decoration: none; /* Corrigido para remover o sublinhado */
+  color: white;
+  text-decoration: none;
   font-size: 1.2rem;
 }
 
 .off-screen-menu a:hover {
-  color: #ff8928; /* Cor de hover */
+  color: #ff8928;
 }
 
-/* Navegação */
+
 nav {
   padding: 1rem;
   display: flex;
-  background-color: rgba(0, 0, 0, 0); /* Sem alteração */
+  background-color: rgba(0, 0, 0, 0);
 }
 
-/* Estilo do hambúrguer */
+
 .ham-menu {
   height: 30px;
   width: 40px;
@@ -86,7 +75,7 @@ nav {
 .ham-menu span {
   height: 5px;
   width: 100%;
-  background-color: #ff4000; /* Cor destacada para o hambúrguer */
+  background-color: #ff4000;
   border-radius: 25px;
   position: absolute;
   left: 50%;
@@ -103,7 +92,7 @@ nav {
   top: 75%;
 }
 
-/* Mudanças quando o hambúrguer está ativo (se transformando em X) */
+
 .ham-menu.active span {
   background-color: white;
 }
@@ -114,7 +103,7 @@ nav {
 }
 
 .ham-menu.active span:nth-child(2) {
-  opacity: 0; /* Esconde a linha do meio */
+  opacity: 0;
 }
 
 .ham-menu.active span:nth-child(3) {
