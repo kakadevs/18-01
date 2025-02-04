@@ -73,6 +73,7 @@ section h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.349); 
+}
 
 button {
     background-color: #1c356b;
@@ -111,4 +112,3 @@ footer {
     margin-top: auto;
     border-radius: 8px;
 }
- }
