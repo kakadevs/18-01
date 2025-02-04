@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #1c356b;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -72,7 +72,7 @@ section h2 {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); 
 }
 
 button {
@@ -104,7 +104,7 @@ form textarea {
 }
 
 footer {
-    background-color: #1c356b;
+    background-color: #b82e00;
     color: white;
     text-align: center;
     padding: 10px;
