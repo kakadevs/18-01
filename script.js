@@ -95,16 +95,7 @@ function loadTasks() {
                 });
             }
         }
-    } else {
-        // Criar um projeto de referência caso seja o primeiro acesso
-        const exampleTask = "Projeto Exemplo";
-        const column = document.querySelector("#projects .tasks");
-        if (column) {
-            const task = createTaskElement(exampleTask);
-            column.appendChild(task);
-            saveTasks();
-        }
-    }
+    } 
 }
 
 let draggedTask = null;
