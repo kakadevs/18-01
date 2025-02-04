@@ -88,14 +88,23 @@ function loadTasks() {
         for (const columnId in tasksData) {
             const column = document.querySelector(`#${columnId} .tasks`);
             if (column) {
-                column.innerHTML = ""; // Deixa o quadro em branco ao carregar
+                column.innerHTML = ""; 
                 tasksData[columnId].forEach(taskName => {
                     const task = createTaskElement(taskName);
                     column.appendChild(task);
                 });
             }
         }
-    } 
+    } else {
+        
+        const exampleTask = "Projeto Exemplo";
+        const column = document.querySelector("#projects .tasks");
+        if (column) {
+            const task = createTaskElement(exampleTask);
+            column.appendChild(task);
+            saveTasks();
+        }
+    }
 }
 
 let draggedTask = null;
@@ -119,3 +128,4 @@ document.querySelectorAll(".column .tasks").forEach(tasksContainer => {
         }
     });
 });
+
