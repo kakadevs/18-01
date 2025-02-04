@@ -25,7 +25,6 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    border: 5px solid #1c356b00;
 }
 
 header .logo h1 {
@@ -69,12 +68,11 @@ section h2 {
 .project-management,
 .contact-info {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto; 
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349); 
 
 button {
     background-color: #1c356b;
@@ -112,12 +110,5 @@ footer {
     width: 100%;
     margin-top: auto;
     border-radius: 8px;
-    border: 5px solid #1c356b00;
 }
-
-.about-info:last-child,
-.project-management:last-child,
-.contact-info:last-child {
-    margin-bottom: 50px;
-    /* Espaço entre a última div e o rodapé */
-}
+ }
