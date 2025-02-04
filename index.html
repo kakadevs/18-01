@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login - Adoro S/A</title>
-        <link rel="icon" type="image/png" href="kil.png">
         <link rel="stylesheet" href="log.css">
+        <link rel="icon" type="image/png" href="kil.png">
+
         <style>
-            
             body {
                 font-family: Arial, sans-serif;
                 background-color: #f4f4f4;
@@ -20,27 +20,35 @@
                 text-align: center;
             }
 
-            
-            .logo-container {
+            /* Tela de carregamento */
+            .loading-screen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
                 display: flex;
-                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                gap: 10px;
-                margin-bottom: 20px;
+                display: none; /* Ocultado por padrão */
             }
 
-            .logo {
-                max-width: 150px;
-                height: auto;
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border: 5px solid rgba(255, 255, 255, 0.3);
+                border-top: 5px solid #ffc800; /* Cor laranja */
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
             }
 
-            .logo-container h1 {
-                margin: 0;
-                font-size: 1.5rem;
-                color: #333;
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
             }
 
-            
+            /* Login */
             .login-container {
                 background: #fff;
                 padding: 20px;
@@ -49,11 +57,6 @@
                 width: 100%;
                 max-width: 300px;
                 text-align: center;
-            }
-
-            .login-container h1 {
-                margin-bottom: 20px;
-                color: #333;
             }
 
             .login-container input {
@@ -95,17 +98,19 @@
             <h1>Login</h1>
             <form id="loginForm">
                 <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Senha"
-                    required>
+                <input type="password" id="password" placeholder="Senha" required>
                 <p class="error" id="errorMsg"></p>
                 <button type="submit">Entrar</button>
             </form>
         </div>
 
+        <!-- Tela de Carregamento -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="spinner"></div>
+        </div>
+
         <script>
-            
             const users = [
-        
                 { email: "kaua.silva@adoro.com.br", password: "//" },
                 { email: "luis.rocha@adoro.com.br", password: "*1234" },
                 { email: "daniele.barros@adoro.com.br", password: "41526" },
@@ -113,24 +118,25 @@
                 { email: "ana.clara@adoro.com.br", password: "12345" },
                 { email: "mellyna.teodoro@adoro.com.br", password: "0405J" },
                 { email: "michel.wirth@adoro.com.br", password: "12345" },
-                { email: "", password: "" },
-                { email: "", password: "" },
             ];
 
-            
             document.getElementById("loginForm").addEventListener("submit", function (e) {
                 e.preventDefault();
 
                 const email = document.getElementById("email").value;
                 const password = document.getElementById("password").value;
                 const errorMsg = document.getElementById("errorMsg");
+                const loadingScreen = document.getElementById("loadingScreen");
 
-                
                 const user = users.find(u => u.email === email && u.password === password);
 
                 if (user) {
                     errorMsg.textContent = "";
-                    window.location.href = "home.html"; 
+                    loadingScreen.style.display = "flex";  // Exibir tela de carregamento
+                    
+                    setTimeout(() => {
+                        window.location.href = "home.html"; // Redirecionamento após 2 segundos
+                    }, 2000);
                 } else {
                     errorMsg.textContent = "Email ou senha inválidos!";
                 }
