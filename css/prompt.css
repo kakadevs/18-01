@@ -1,0 +1,83 @@
+
+body {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: linear-gradient(to bottom, #f0b74d, #ff5100);
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input de texto */
+#modalInput {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Botões */
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#confirmBtn {
+    background-color: #f59d19;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancelBtn {
+    background-color: #bb2d02;
+    color: #ffffff;
+    border: 1px solid #006d7100;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmBtn:hover {
+    background-color: #ebb623;
+}
+
+#cancelBtn:hover {
+    background-color: #810000;
+}
+
+/* Estilos para as tarefas */
+.task {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}

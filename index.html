@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Adoro S/A</title>
+    <link rel="stylesheet" href="css/log.css">
+    <link rel="icon" type="image/png" href="/images/images.png">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #ffc800;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #ffc800;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #ff0d00;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo-container">
+        <img src="/images/images.png" alt="Logo Adoro S/A" class="logo">
+
+    </div>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <p class="error" id="errorMsg"></p>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+
+
+    <script>
+        const users = [
+            { email: "kaua.silva@adoro.com.br", password: "//" },
+            { email: "luis.rocha@adoro.com.br", password: "*1234" },
+            { email: "daniele.barros@adoro.com.br", password: "41526" },
+            { email: "nyla.astolfo@adoro.com.br", password: "8486*" },
+            { email: "ana.clara@adoro.com.br", password: "12345" },
+            { email: "mellyna.teodoro@adoro.com.br", password: "0405J" },
+
+        ];
+
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMsg = document.getElementById("errorMsg");
+            const loadingScreen = document.getElementById("loadingScreen");
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                errorMsg.textContent = "";
+                loadingScreen.style.display = "flex";
+
+                setTimeout(() => {
+                    window.location.href = "home.html";
+                }, 3000);
+            } else {
+                errorMsg.textContent = "Email ou senha inválidos!";
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

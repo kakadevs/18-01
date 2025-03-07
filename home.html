@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoro S/A - Gerenciamento de Projetos</title>
+    <link rel="icon" type="image/png" href="/images/images.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/buger.css">
+    
+
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #ffc800;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/images/images.png" alt="Logo Adoro S/A" class="logo-img">
+            <h1>Adoro S/A</h1>
+            
+        </div>
+
+        <div class="off-screen-menu">
+            <img src="/images/imgj.png"Logo Adoro S/A" class="logo-img">
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="https://www.adoro.com.br/a-adoro/">Sobre Nós</a></li>
+                <li><a href="https://www.adoro.com.br/receitas/">Receitas Ad'oro</a></li>
+                <li><a href="https://www.adoro.com.br/sac/">Contato</a></li>
+            </ul>
+        </div>
+
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            
+        </div>
+    </section>
+
+  
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>VP Rotina Meio Ambiente </h2>
+            <img src="/images/meio.jpg" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('ambiente.html')">Administrar Projeto</button>
+
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>Acesso Frigorífico Vista</h2>
+            <img src="/images/vista.jpeg" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('ponto.html')">Administrar Projeto</button>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>Licenciamento Ponto De Abastecimento</h2>
+            <img src="/images/ponto.jpg" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('ponto.html')">Administrar Projeto</button>
+
+        </div>
+    </section>
+
+
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>VISTA Reclamação (Odor</h2>
+            <img src="/assets/" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('.html')">Administrar Projeto</button>
+
+        </div>
+    </section>
+
+
+    <section class="projects">
+        <div class="project-management">
+            <h2></h2>
+            <img src="/assets/" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('.html')">Administrar Projeto</button>
+
+        </div>
+    </section>
+
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>Rotina Meio Ambiente VP</h2>
+            <img src="/assets/" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('.html')">Administrar Projeto</button>
+
+            
+            
+        </div>
+    </section>
+
+
+    <section class="projects">
+        <div class="project-management">
+            <h2>Rotina Meio Ambiente VP</h2>
+            <img src="/assets/" alt="imagem">
+            <p>Administrar Projeto de uma maneira segura e eficiente.</p>
+            <button onclick="startLoading('.html')">Administrar Projeto</button>
+
+        </div>
+    </section>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Adoro S/A. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function startLoading(url) {
+
+            const loadingScreen = document.getElementById("loadingScreen");
+            loadingScreen.style.display = "flex";
+
+
+            setTimeout(function () {
+                window.location.href = url;
+            }, 2000);
+        }
+    </script>
+
+    <script src="buger.js"></script>
+    <script src="script.js"></script>
+   
+
+</body>
+
+</html>

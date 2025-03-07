@@ -1,0 +1,94 @@
+.dashboard {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+body {
+  background: #ffffff9f;
+}
+
+
+
+.column {
+  background-color: #6363638f;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(85, 80, 80, 0.1);
+  position: center;
+  align-items: center;
+
+}
+
+h1 {
+  color: white
+}
+
+ul {
+
+  color: wheat
+}
+
+div {
+  color: rgb(0, 0, 0);
+  padding: 0lvh;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.column h2 {
+  margin: 0 0 15px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+button {
+  background-color: #d4bd36b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+
+}
+
+.task {
+  background-color: #e0f7fa;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 10px;
+  cursor: grab;
+  text-align: center;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.column.over {
+  background-color: #b5b5b5;
+}
+
+.add-task {
+  background-color: #d4bd36b4;
+  ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.add-task:hover {
+  background-color: #cf3021;
+}

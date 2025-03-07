@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoro S/A - Gerenciamento de Projetos</title>
+    <link rel="icon" type="image/png" href="images/images.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="css/buger.css">
+    <link rel="stylesheet" href="css/prompt.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/images.png" alt="Logo Adoro S/A" class="logo">
+            <h1>Adoro S/A</h1>
+        </div>
+        <nav>
+            <div class="off-screen-menu">
+                <img src="/images/imgj.png" alt="Logo Adoro S/A" class="logo-img">
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="https://www.adoro.com.br/a-adoro/">Sobre Nós</a></li>
+                    <li><a href="https://www.adoro.com.br/receitas/">Receitas Ad'oro</a></li>
+                    <li><a href="https://www.adoro.com.br/sac/">Contato</a></li>
+                </ul>
+            </div>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            
+        </div>
+    </section>
+
+    <div class="container">
+        <h1 class="titulo-container">Quadro KAN-BAN</h1>
+
+        <div class="dashboard">
+            <div class="column" id="pendente">
+                <h2>Pendente</h2>
+                <div class="tasks"></div>
+                <button class="add-task">Adicionar Projeto</button>
+            </div>
+
+            <div class="column" id="analise">
+                <h2>Análise</h2>
+                <div class="tasks"></div>
+                <button class="add-task">Adicionar Projeto</button>
+            </div>
+
+            <div class="column" id="concluido">
+                <h2>Concluído</h2>
+                <div class="tasks"></div>
+                <button class="add-task">Adicionar Projeto</button>
+            </div>
+        </div>
+    </div>
+
+   >
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <img src="images/images.png" alt="Logo Adoro S/A" class="logo">
+            <h3>Novo Projeto:</h3>
+            <input type="text" id="modalInput" placeholder="Nome do projeto...">
+            <div class="modal-buttons">
+                <button id="confirmBtn">OK</button>
+                <button id="cancelBtn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Ad'oro 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/buger.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/prompt.js"></script>
+</body>
+
+</html>

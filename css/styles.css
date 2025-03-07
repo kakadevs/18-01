@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    background: linear-gradient(to bottom, #003261, #f0b74d, #ff5100);
+}
+
+h1 {
+    color: white;
+}
+
+header {
+    background-color: #f0b74d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+header .logo-img {
+    margin-top: -10px;
+}
+
+.off-screen-menu .logo-img {
+    position: relative;
+    top: -100px;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+}
+
+
+
+.container {
+    background-color: #002c23b7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+}
+
+
+
+header .logo p {
+    font-size: 1rem;
+    top: -5px;
+    /
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.intro {
+    text-align: center;
+}
+
+.about-info,
+.project-management,
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+button {
+    background-color: #1c356b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1c6c41;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+footer {
+    background-color: #1c356b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+
+.project-management img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 130px;
+    mix-blend-mode: multiply;
+
+}
